@@ -1,0 +1,40 @@
+name: ISO 27001 Non-Conformity
+description: Track an ISO 27001 finding from an auditor.
+title: ""
+labels: ["ISO 27001", "audit"]
+body:
+  - type: textarea
+    id: finding
+    attributes:
+      label: Audit Findings
+      placeholder: During the Assessment it was observed that Teleport did not...
+    validations:
+      required: true
+  - type: textarea
+    id: recommendation
+    attributes:
+      label: Recommendation
+      placeholder: It is recommended that Teleport...
+    validations:
+      required: true
+  - type: dropdown
+    id: rating
+    attributes:
+      label: Nonconformity Rating
+      options:
+        - Observation
+        - Opportunity for Improvement
+        - Area of Concern
+        - Minor Nonconformity
+        - Major Nonconformity
+    validations:
+      required: true
+  - type: dropdown
+    id: audit-type
+    attributes:
+      label: Audit Type
+      options:
+        - Internal Audit
+        - Mock Audit
+        - External Audit - Stage 1
+        - External Audit - Stage 2
